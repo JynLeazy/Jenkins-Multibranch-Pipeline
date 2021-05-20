@@ -20,9 +20,9 @@ pipeline {
 
 			stage('Three') {
 				steps {
-					sh '
+					sh '''
 						echo "Step Three"
-					'
+					'''
 				}
 			}
 		}
