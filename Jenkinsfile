@@ -5,7 +5,7 @@ pipeline {
 				
 				steps {
 					script {
-						env.EXECUTE="True"
+						env.EXECUTE = "True"
 					}
 				}
 				
