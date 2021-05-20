@@ -3,42 +3,27 @@ pipeline {
 		stages {
 			stage('First') {
 				steps {
-					sh '''
-						echo "Step One"
+					sh '''#!/bin/bash
+						echo "Step -One"
 					'''
-				}
-				steps {
-					script {
-						env.EXECUTE="True"
-					}
 				}
 			}
 
 
 			stage('Second') {
-				when {
-					expression { EXECUTE == "True"}
-				}
 				steps {
-					sh '''
-						echo "Updating Second Stage"
+					sh '''#!/bin/bash
+						echo "Step -Two"
 					'''
 				}
-				steps {
-					script {
-						echo "${EXECUTE}"
-					}
-				}
-				
 			} 
 
-			stage('Third') {
+			stage('Third'){
 				steps {
-					sh '''
-						echo "Step Three"
+					sh '''#!/bin/bash
+						echo "Step -Three"
 					'''
 				}
 			}
 		}
-	
 }
