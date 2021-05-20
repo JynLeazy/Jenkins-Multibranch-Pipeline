@@ -3,18 +3,18 @@ pipeline {
 		stages {
 			stage('One') {
 				steps {
-					sh '
+					sh '''
 						echo "Step One"
-					'
+					'''
 				}
 			}
 
 
 			stage('Two') {
 				steps {
-					sh '
+					sh '''
 						echo "Step Two"
-					'
+					'''
 				}
 			} 
 
