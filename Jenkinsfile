@@ -1,7 +1,10 @@
 pipeline {
 	agent any
+	environment {
+	        FOO = "bar"
+	}
 		stages {
-			stage("First") {
+			stage('First') {
 				
 				steps {
 					script {
