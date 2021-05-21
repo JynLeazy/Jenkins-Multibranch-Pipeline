@@ -19,8 +19,8 @@ pipeline {
 
 
 			stage('second') {
-				when {
-					expression { EXECUTE == "True"}
+				when not {
+					expression { EXECUTE == "Falase"}
 				}
 				steps {
 					sh '''
