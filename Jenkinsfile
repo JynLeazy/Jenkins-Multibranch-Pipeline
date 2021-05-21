@@ -1,8 +1,5 @@
 pipeline {
 	agent any
-	environment {
-	        
-	}
 		stages {
 			stage('first') {
 				
@@ -19,8 +16,8 @@ pipeline {
 
 
 			stage('second') {
-				when not {
-					expression { EXECUTE == "Falase"}
+				when {
+					expression { EXECUTE == "True"}
 				}
 				steps {
 					sh '''
@@ -34,7 +31,7 @@ pipeline {
 			} 
 
 			stage('third'){
-				when{
+				when {
 					expression { EXECUTE == "False"}
 				}
 				steps {
