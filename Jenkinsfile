@@ -6,16 +6,14 @@ pipeline {
 		stages {
 			stage('first') {
 				
-				steps {
-					script {
-						env.JORGE = "True"
-					}
-				}
-			
+						
 				steps {
 					sh '''
 						echo "Step -One"
 					'''
+					script {
+						env.JORGE = "True"
+					}
 				}
 			}
 
