@@ -34,6 +34,9 @@ pipeline {
 			} 
 
 			stage('third'){
+				when {
+					expression { EXECUTE == "True"}
+				}
 				steps {
 					sh '''
 						echo "Step -Three"
