@@ -4,14 +4,14 @@ pipeline {
 	        FOO = "bar"
 	}
 		stages {
-			stage('First') {
+			stage('first') {
 				
 				steps {
 					script {
 						env.JORGE = "True"
 					}
 				}
-				
+			
 				steps {
 					sh '''
 						echo "Step -One"
@@ -20,7 +20,7 @@ pipeline {
 			}
 
 
-			stage('Second') {
+			stage('second') {
 				steps {
 					sh '''
 						echo "Step -Two"
@@ -28,7 +28,7 @@ pipeline {
 				}
 			} 
 
-			stage('Third'){
+			stage('third'){
 				steps {
 					sh '''
 						echo "Step -Three"
