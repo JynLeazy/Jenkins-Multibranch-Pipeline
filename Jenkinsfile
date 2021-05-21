@@ -19,10 +19,17 @@ pipeline {
 
 
 			stage('second') {
+				when {
+					expression { EXECUTE == "True"}
+				}
 				steps {
 					sh '''
 						echo "Step -Two"
+						echo "Updating Second Stage"
 					'''
+					script {
+						echo "${EXECUTE}"
+					}
 				}
 			} 
 
