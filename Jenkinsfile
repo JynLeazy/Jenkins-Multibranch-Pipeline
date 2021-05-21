@@ -12,7 +12,7 @@ pipeline {
 						echo "Step -One"
 					'''
 					script {
-						env.JORGE = "True"
+						env.EXECUTE = "True"
 					}
 				}
 			}
