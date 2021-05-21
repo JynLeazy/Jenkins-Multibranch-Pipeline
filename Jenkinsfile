@@ -32,7 +32,8 @@ pipeline {
 
 			stage('third'){
 				when {
-					expression { EXECUTE == "False"}
+					Not
+					expression { EXECUTE == "True"}
 				}
 				steps {
 					sh '''
