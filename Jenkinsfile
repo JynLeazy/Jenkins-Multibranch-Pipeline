@@ -8,12 +8,12 @@ pipeline {
 				
 				steps {
 					script {
-						env.EXECUTE = "True"
+						env.JORGE = "True"
 					}
 				}
 				
 				steps {
-					sh '''#!/bin/bash
+					sh '''
 						echo "Step -One"
 					'''
 				}
@@ -22,7 +22,7 @@ pipeline {
 
 			stage('Second') {
 				steps {
-					sh '''#!/bin/bash
+					sh '''
 						echo "Step -Two"
 					'''
 				}
@@ -30,7 +30,7 @@ pipeline {
 
 			stage('Third'){
 				steps {
-					sh '''#!/bin/bash
+					sh '''
 						echo "Step -Three"
 					'''
 				}
